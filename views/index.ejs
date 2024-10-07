@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Transaction History</h1>
+        <a href="/add" class="add-transaction-btn">Add Transaction</a>
+        <table class="transaction-table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% transactions.forEach(transaction => { %>
+                    <tr>
+                        <td><%= transaction.description %></td>
+                        <td><%= transaction.amount %></td>
+                        <td><%= transaction.category %></td>
+                        <td><%= transaction.date.toLocaleDateString() %></td>
+                        <td>
+                            <a href="/edit/<%= transaction._id %>" class="edit-btn">Edit</a>
+                            <a href="/delete/<%= transaction._id %>" class="delete-btn">Delete</a>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%= transaction ? 'Edit Transaction' : 'Add Transaction' %></title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header"><%= transaction ? 'Edit Transaction' : 'Add Transaction' %></h1>
+        <form action="<%= transaction ? '/edit/' + transaction._id : '/add' %>" method="POST" class="transaction-form">
+            <input type="text" name="description" placeholder="Description" value="<%= transaction ? transaction.description : '' %>" required class="form-input">
+            <input type="number" name="amount" placeholder="Amount" value="<%= transaction ? transaction.amount : '' %>" required class="form-input">
+            <input type="text" name="category" placeholder="Category" value="<%= transaction ? transaction.category : '' %>" required class="form-input">
+            <input type="date" name="date" value="<%= transaction ? transaction.date.toISOString().split('T')[0] : '' %>" required class="form-input">
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+        <a href="/" class="back-btn">Back to Transactions</a>
+    </div>
+</body>
+</html>

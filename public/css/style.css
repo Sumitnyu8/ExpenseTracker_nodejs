@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-transaction-btn {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.add-transaction-btn:hover {
+    background-color: #0056b3;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    margin-right: 5px;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.transaction-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.submit-btn {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
